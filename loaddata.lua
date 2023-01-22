@@ -1,4 +1,4 @@
-shared.loaddata = {459208566}
+shared.loaddata = {4236309920}
 shared.Funny = {}
 pcall(function()
 	for i,v in pairs(shared.Funny) do
