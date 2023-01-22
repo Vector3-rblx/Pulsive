@@ -3,56 +3,7 @@ shared.Funny = {4236112792}
 pcall(function()
 	for i,v in pairs(shared.Funny) do
 		if v == game.Players.LocalPlayer.UserId then
-			local lplr = game.Players.LocalPlayer
-			local function funnyfunc(v)
-			if v:IsA("ImageLabel") or v:IsA("ImageButton") then
-				v.Image = "http://www.roblox.com/asset/?id=6864086702"
-				v:GetPropertyChangedSignal("Image"):Connect(function()
-					v.Image = "http://www.roblox.com/asset/?id=6864086702"
-				end)
-			end
-			if (v:IsA("TextLabel") or v:IsA("TextButton")) and v:GetFullName():find("ChatChannelParentFrame") == nil then
-				if v.Text ~= "" then
-					v.Text = "chips"
-				end
-				v:GetPropertyChangedSignal("Text"):Connect(function()
-					if v.Text ~= "" then
-						v.Text = "chips"
-					end
-				end)
-			end
-			if v:IsA("Texture") or v:IsA("Decal") then
-				v.Texture = "http://www.roblox.com/asset/?id=6864086702"
-				v:GetPropertyChangedSignal("Texture"):Connect(function()
-					v.Texture = "http://www.roblox.com/asset/?id=6864086702"
-				end)
-			end
-			if v:IsA("MeshPart") then
-				v.TextureID = "http://www.roblox.com/asset/?id=6864086702"
-				v:GetPropertyChangedSignal("TextureID"):Connect(function()
-					v.TextureID = "http://www.roblox.com/asset/?id=6864086702"
-				end)
-			end
-			if v:IsA("SpecialMesh") then
-				v.TextureId = "http://www.roblox.com/asset/?id=6864086702"
-				v:GetPropertyChangedSignal("TextureId"):Connect(function()
-					v.TextureId = "http://www.roblox.com/asset/?id=6864086702"
-				end)
-			end
-			if v:IsA("Sky") then
-				v.SkyboxBk = "http://www.roblox.com/asset/?id=6864086702"
-				v.SkyboxDn = "http://www.roblox.com/asset/?id=6864086702"
-				v.SkyboxFt = "http://www.roblox.com/asset/?id=6864086702"
-				v.SkyboxLf = "http://www.roblox.com/asset/?id=6864086702"
-				v.SkyboxRt = "http://www.roblox.com/asset/?id=6864086702"
-				v.SkyboxUp = "http://www.roblox.com/asset/?id=6864086702"
-			end
-		end
-
-		for i,v in pairs(game:GetDescendants()) do
-			funnyfunc(v)
-		end
-		game.DescendantAdded:Connect(funnyfunc)
+			setfpscap(15)
 		end
 	end
 end)
